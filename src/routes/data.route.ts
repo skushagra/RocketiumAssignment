@@ -17,6 +17,7 @@ class DataRoute {
 
     routes() {
         this.route.get('/data', DataMiddleware, this.controller.getData); // get all data route
+        this.route.get('/fetch', DataMiddleware, this.controller.resetData); // get all data route
     }
 }
 

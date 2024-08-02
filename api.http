@@ -1,0 +1,11 @@
+### Get all data
+GET http://localhost:3000/api/v0/data
+
+### Get data by name
+GET http://localhost:3000/api/v0/data?name=Abla%20Dilmurat
+
+### Get data by multiple names
+GET http://localhost:3000/api/v0/data?name=Adeel%20Solangi,Afzal%20Ghaffar
+
+### Get all data ordered by name in desc order limited to 11 results with offset 1
+GET http://localhost:3000/api/v0/data?sort=name:desc&limit=11&offset=1 

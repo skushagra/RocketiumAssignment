@@ -1,11 +1,19 @@
 import { Request, Response } from 'express';
 import DB from '../models/DB';
 import { Op } from 'sequelize';
+import DataSource from '../utils/DataSource';
 
 class DataController {
 
     constructor() {
         this.getData = this.getData.bind(this); // bind the method to the class
+    }
+
+    public async resetData(req: Request, res: Response) {
+        await DataSource.init();
+        res.status(200).json({
+            message: 'Data fetch successfully'
+        });
     }
 
     public async getData(req: Request, res: Response) {
